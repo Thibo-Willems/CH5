@@ -1,12 +1,32 @@
 .navbar {
-    display: flex;
-    justify-content: center;         /* centreert de rij */
-    gap: 60px;
+    position: fixed;
+    justify-content: flex-end;         /* centreert de rij */
+    gap: 8px;
+    align-items: center;
+    height: 65px;
+    left: 630px;
 }
 
 .buttons {
-    display: inline-block;         /* maakt ze geschikt voor flex horizontaal */
+    display: inline;         /* maakt ze geschikt voor flex horizontaal */
     border-radius: 5px;            /* maakt de hoeken afgerond */
-    padding: 10px 20px;            /* maakt de “doos” groter rondom de tekst */
+    padding: 20px 30px;            /* maakt de “doos” groter rondom de tekst */
     background-color: #316947;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 110%;
+    border: solid black;
+    transition: transform 0.2s;     /* zorgt voor smooth vergroting */
+    cursor: pointer;
+}
+
+.buttons:hover {
+    transform: scale(1.1);          /* knop wordt 10% groter bij hover */
+}
+
+#logo-bedrijf {
+    position: absolute;
+    height: auto;
+    width: 200px;
+    display: inline;
+    right: 10px;
 }
