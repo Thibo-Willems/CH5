@@ -4,14 +4,15 @@
     gap: 8px;
     align-items: center;
     height: 65px;
-    left: 630px;
+    left: 515px;
+    z-index: 2;
 }
 
 .buttons {
-    display: inline;         /* maakt ze geschikt voor flex horizontaal */
-    border-radius: 5px;            /* maakt de hoeken afgerond */
-    padding: 20px 30px;            /* maakt de “doos” groter rondom de tekst */
-    background-color: #316947;
+    display: inline;                /* maakt ze geschikt voor flex horizontaal */
+    border-radius: 5px;             /* maakt de hoeken afgerond */
+    padding: 20px 30px;             /* maakt de “doos” groter rondom de tekst */
+    background-color: #A3CCBC;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 110%;
     border: solid black;
@@ -24,9 +25,180 @@
 }
 
 #logo-bedrijf {
-    position: absolute;
+    position: fixed;
     height: auto;
     width: 200px;
     display: inline;
-    right: 10px;
+    right: 0px;
+    z-index: 2;
+    top: 0px;
+}
+
+.horizontaal-blok {           
+    position: fixed;
+    z-index: 1;
+    height: 100px;
+    width: 130%;
+    margin-top: -10px;
+    right: 100px;
+    background-color: #4CA883
+}
+
+.verticaal-blok {
+    position: fixed;
+    transform: rotate(-90deg);  
+    z-index: 1;
+    height: 238px;
+    width: 112%;
+    margin-top: -10px;
+    right: -940px;
+    background-color: #163550;
+}
+
+#inleiding {
+    border: 2px solid #406C7D;
+    border-radius: 10px;  
+    border-radius: 5px;
+    display: flex;         
+    justify-content: center; /* horizontaal centreren */
+    align-items: center;     /* verticaal centreren */
+    padding: 10px 15px;
+    background-color: #f0f4f8;
+    z-index: 1;
+    height: 100px;
+    width: 700px;
+    position: relative;
+    top: 150px;
+    left: 420px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.welkom {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 300%;
+    color: #406C7D;
+    margin: 0 10px; /* ruimte tussen woorden */
+}
+
+#info-blok1 {
+    border: 2px solid #406C7D;   
+    border-radius: 10px;                              /* afgeronde hoeken */
+    padding: 20px 30px;                               /* ruimte binnen het blok */
+    width: 700px;                                     /* zelfde breedte als #inleiding */
+    background-color: #f0f4f8;                      /* lichte achtergrondkleur voor contrast */
+    position: relative;                               /* blijft in de normale flow, geen verschuiving van andere elementen */
+    top: 200px;                                       /* verschuif naar beneden onder #inleiding */
+    left: 405px;                                      /* zelfde horizontale start als #inleiding */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);         /* subtiele schaduw voor diepte */
+    font-family: 'Arial', sans-serif;
+}
+
+#info-blok1 h2 {
+    margin-top: 0;
+    color: #406C7D;
+    font-size: 1.8em;
+}
+
+#info-blok1 p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+#info-blok2 {
+    border: 2px solid #406C7D;   
+    border-radius: 10px;                              /* afgeronde hoeken */
+    padding: 20px 30px;                               /* ruimte binnen het blok */
+    width: 700px;                                     /* zelfde breedte als #inleiding */
+    background-color: #f0f4f8;                      /* lichte achtergrondkleur voor contrast */
+    position: relative;                               /* blijft in de normale flow, geen verschuiving van andere elementen */
+    top: 200px;                                       /* verschuif naar beneden onder #inleiding */
+    left: 405px;                                      /* zelfde horizontale start als #inleiding */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);         /* subtiele schaduw voor diepte */
+    font-family: 'Arial', sans-serif;
+}
+
+#info-blok2 h2 {
+    margin-top: 0;
+    color: #406C7D;
+    font-size: 1.8em;
+}
+
+#info-blok2 p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+.vakgebieden {
+    list-style-type: square; /* of wat je wilt */
+    margin: 0;               /* verwijder standaard marge */
+    padding-left: 13px;      /* stel zelf de linkerafstand in */
+}
+
+#footer {
+    background-color: #163550; /* of een lichte variant van je kleurenschema */
+    color: white;               /* tekstkleur */
+    text-align: center;         /* tekst in het midden */
+    padding: 20px;              /* ruimte rondom de tekst */
+    margin-top: 50px;           /* afstand tot de bovenliggende inhoud */
+    border-radius: 5px;         /* optioneel, past bij je stijl van de info-blokken */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* subtiele schaduw voor diepte */
+    top: 213px;
+    position: relative;
+    left: -100px;
+    font-family: 'Arial', sans-serif;
+    font-style: italic;
+}
+
+#witte-vrachtwagen {
+    position: fixed;
+    height: 270px;
+    width: 340px;
+    display: inline;
+    right: 0px;
+    z-index: 2;
+    top: 140px;
+    left: 1210px;
+    object-fit: cover;
+    border: 5px solid #000000;
+}
+
+#distributie-centrum {
+    position: fixed;
+    height: 250px;
+    width: 320px;
+    display: inline;
+    right: 0px;
+    z-index: 2;
+    top: 550px;
+    left: 1210px;
+    object-fit: cover;
+    border: 5px solid #000000;
+}
+
+#bezorging-ctrlalt {
+    position: fixed;
+    height: 250px;
+    width: 320px;
+    display: inline;
+    right: 0px;
+    z-index: 2;
+    top: 550px;
+    left: 50px;
+    object-fit: cover;
+    border: 5px solid #000000;
+}
+
+#opslaan-goederen {
+    position: fixed;
+    height: 250px;
+    width: 320px;
+    display: inline;
+    right: 0px;
+    z-index: 2;
+    top: 145px;
+    left: 50px;
+    object-fit: cover;
+    border: 5px solid #000000;
 }
