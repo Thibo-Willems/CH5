@@ -1,0 +1,12 @@
+.navbar {
+    display: flex;
+    justify-content: center;         /* centreert de rij */
+    gap: 60px;
+}
+
+.buttons {
+    display: inline-block;         /* maakt ze geschikt voor flex horizontaal */
+    border-radius: 5px;            /* maakt de hoeken afgerond */
+    padding: 10px 20px;            /* maakt de “doos” groter rondom de tekst */
+    background-color: #316947;
+}
